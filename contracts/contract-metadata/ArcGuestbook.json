@@ -1,0 +1,112 @@
+{
+  "contractAddress": "0x68f59fddff891f764d46098dfe3843ce4ce69814",
+  "network": "ARC-TESTNET",
+  "deployerWalletId": "3c2464b2-8369-52e2-a782-800bbeca5396",
+  "contract_code_path": "/home/user/app/contracts/ArcGuestbook.sol",
+  "contract_compiled_code_path": "/home/user/app/contracts/out/ArcGuestbook.sol/ArcGuestbook.json",
+  "contract_network_and_links": {
+    "Arc Testnet": "https://explorer.testnet.arc.io/address/0x68f59fddff891f764d46098dfe3843ce4ce69814"
+  },
+  "contract_deployments": [
+    {
+      "chain": "Arc Testnet",
+      "address": "0x68f59fddff891f764d46098dfe3843ce4ce69814",
+      "explorerUrl": "https://explorer.testnet.arc.io/address/0x68f59fddff891f764d46098dfe3843ce4ce69814",
+      "txHash": "0x645e30ed58a34458ccd3dafe9f5b43445c7d8cf82a7310fa8fac38a685eef94a",
+      "deployedAt": "2026-09-24T21:34:05.456Z"
+    }
+  ],
+  "abi": [
+    {
+      "type": "function",
+      "name": "getMessageCount",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "count",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getMessages",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "messages",
+          "type": "tuple[]",
+          "internalType": "struct ArcGuestbook.Entry[]",
+          "components": [
+            {
+              "name": "sender",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "timestamp",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "signMessage",
+      "inputs": [
+        {
+          "name": "text",
+          "type": "string",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "MessageSigned",
+      "inputs": [
+        {
+          "name": "sender",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "indexed": false,
+          "internalType": "string"
+        },
+        {
+          "name": "timestamp",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "EmptyMessage",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "MessageTooLong",
+      "inputs": []
+    }
+  ]
+}
